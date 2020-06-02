@@ -1,0 +1,20 @@
+{
+  "name": "5_js_requests",
+  "version": "1.0.0",
+  "description": "Mi primer npm",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juannodeb",
+  "license": "ISC",
+  "repository": "https://github.com/juannodeb/batch41",
+  "keywords": [
+    "npm",
+    "request",
+    "pokemon"
+  ],
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
