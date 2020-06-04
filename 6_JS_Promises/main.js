@@ -10,12 +10,16 @@ const bandSearch = (bandName) => {
     request(endPoint, (error, response, body) => {
       if (error === null) {
         const res = JSON.parse(body);
-        const band = new Band(
-          res.artists[0].strArtist,
-          res.artists[0].intFormedYear,
-          res.artists[0].strWebsite,
-          res.artists[0].strGenre
-        );
+        // const band = new Band(
+        //   res.artists[0].strArtist,
+        //   res.artists[0].intFormedYear,
+        //   res.artists[0].strWebsite,
+        //   res.artists[0].strGenre
+        // );
+
+        // Creo constantes basadas en los attrs del objeto (res). Es la forma destructurada de lo comentado anteriormente
+        const { strArtist, intFormedYear, strWebsite, strGenre } = res.artists[0];
+        const band = new Band(strArtist, intFormedYear, strWebsite, strGenre);
         resolve(band);
       } else {
         reject('No encontré la banda');
